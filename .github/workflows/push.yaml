@@ -26,7 +26,7 @@ jobs:
 
       - name: Build and tag Docker image
         run: |
-          docker build -t faceebooc .
+          docker build -t facebooc .
           docker tag facebooc:latest 417136203553.dkr.ecr.us-east-1.amazonaws.com/facebooc:latest
 
       - name: Push Docker image to ECR

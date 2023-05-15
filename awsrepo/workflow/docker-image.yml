@@ -1,0 +1,16 @@
+version: 3
+
+services:
+  myapp:
+    image: mydockerhubusername/myapp:latest
+    ports:
+      - "80:80"
+    environment:
+      - MYAPP_ENV=prod
+    logging:
+      driver: "awslogs"
+      options:
+        awslogs-region: "us-east-1"
+        awslogs-group: "/myapp/logs"
+        awslogs-stream-prefix: "myapp"
+
